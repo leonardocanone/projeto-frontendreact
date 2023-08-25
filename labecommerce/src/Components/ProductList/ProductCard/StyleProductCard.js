@@ -9,7 +9,7 @@ export const ProductImage = styled.div`
 
     border: 1px solid black;
     min-height: 30vh;
-    min-width: 15vw;
+    min-width: 14vw;
 `
 
 export const ProductInfo = styled.div`
@@ -18,7 +18,7 @@ export const ProductInfo = styled.div`
     flex-direction: column;
     border: 1px solid black;
     min-height: 14vh;
-    min-width: 15vw;
+    min-width: 14vw;
     margin-top: 0.15rem;
     margin-bottom: 1.5rem;
     padding: 0.5rem;

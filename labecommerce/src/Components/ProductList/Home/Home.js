@@ -2,11 +2,12 @@ import { ProductCard } from "../ProductCard/ProductCard";
 import { HomeContainer, HomeHeader, HomeProductCard } from "./StyleHome";
 
 
-export function Home() {
+export function Home({products}) {
+    
     return (
         <HomeContainer>
             <HomeHeader>
-            <h4>Quantidade de produtos: </h4>
+            <h4>Quantidade de produtos: {products.length} </h4>
             <label>
                 Ordenação:
                 <select>
@@ -16,16 +17,11 @@ export function Home() {
             </label>
             </HomeHeader>
             <HomeProductCard>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                <ProductCard product={products[0]} />
+                <ProductCard product={products[1]} />
+                <ProductCard product={products[2]} />
+                <ProductCard product={products[3]} />
             </HomeProductCard>
-        </HomeContainer>
+        </HomeContainer>        
     )
 }
