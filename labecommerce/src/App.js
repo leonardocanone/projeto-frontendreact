@@ -4,6 +4,7 @@ import { Home } from './Components/ProductList/Home/Home';
 import { Cart } from './Components/ShoppingCart/Cart/Cart';
 import { GlobalStyle } from './GlobalStyle';
 import { AppContainer } from './StyleApp';
+import { productsList } from './Components/assents/productsList';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
 
       <AppContainer>
         <Filters />
-        <Home />
+        <Home
+        products={productsList}
+        />
         <Cart />
       </AppContainer>
     </>
