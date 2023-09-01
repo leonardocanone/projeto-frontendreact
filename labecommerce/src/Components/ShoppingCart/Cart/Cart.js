@@ -2,7 +2,8 @@ import { Items } from "../Items/Items";
 import { ShoppingCartContainer } from "./StyleCart";
 
 
-export function Cart() {
+export function Cart(props) {
+    // console.log(props);
     return (
         <ShoppingCartContainer>
             <h3>Carrinho</h3>
