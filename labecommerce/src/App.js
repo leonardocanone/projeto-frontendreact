@@ -12,8 +12,14 @@ function App() {
   const [minFilter, setMinfilter] = useState("")
   const [maxFilter, setMaxFilter] = useState("")
   const [searchFilter, setSearchFilter] = useState("")
-  const [cart, setCart] = useState ("")
+  const [cart, setCart] = useState ([])
   const [amount, setAmount] = useState(0)
+
+
+  const addProductToCart = () => {
+
+  }
+
 
   // const filtrarValorMinimo = (event) => {
   //   setMinfilter(event.target.value)
@@ -46,7 +52,7 @@ function App() {
     setSearchFilter(event.target.value)
   }
 
-  console.log(`${minFilter} ${maxFilter} ${searchFilter}`)
+  // console.log(`${minFilter} ${maxFilter} ${searchFilter}`)
 
   return (
     <>
@@ -70,6 +76,10 @@ function App() {
         setCart={setCart}
         amount={amount}
         setAmount={setAmount}
+        addProductToCart={addProductToCart}
+        minFilter={minFilter}
+        maxFilter={maxFilter}
+        searchFilter={searchFilter}
         />
         {/* <Home 
         produto1={productsList[0]}

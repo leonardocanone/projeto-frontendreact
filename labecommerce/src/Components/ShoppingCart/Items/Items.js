@@ -1,7 +1,9 @@
 import { ItemContainer } from "./StyleItems";
 
 
-export function Items() {
+export function Items(props) {
+    // console.log(props);
+
     return (
         <ItemContainer>
             <p>Nome do produto</p>
