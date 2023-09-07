@@ -3,33 +3,45 @@ import { ProductCard } from "../ProductCard/ProductCard";
 import { HomeContainer, HomeHeader, HomeProductCard } from "./StyleHome";
 
 
-export function Home({products, cart, setCart, amount, setAmount}) {
-    // console.log();
+export function Home({products, cart, setCart, amount, setAmount, addProductToCart, minFilter, maxFilter, searchFilter}) {
+    // console.log(products);
 
-    const [ordination, setOrdination] = useState("")
-
+    const [ordination, setOrdination] = useState("crescente")
+    
     const alterarOrdem = (event) => {
         setOrdination(event.target.value)
     }
     // console.log(ordination);
+
 
     return (
         <HomeContainer>
             <HomeHeader>
             <h4>Quantidade de produtos: {products.length} </h4>
             <label>
-                Ordenação:
+                Ordenação por preço:
                 <select value={ordination} onChange={alterarOrdem} >
-                   <option>Crescente</option> 
+                   <option value={"crescente"}>Crescente</option> 
                    <option>Decrescente</option> 
                 </select>
             </label>
             </HomeHeader>
             <HomeProductCard>
-                <ProductCard product={products[0]} />
+
+                {/* <ProductCard product={products[0]} />
                 <ProductCard product={products[1]} />
                 <ProductCard product={products[2]} />
-                <ProductCard product={products[3]} />
+                <ProductCard product={products[3]} /> */}
+                <ProductCard 
+                product={products}
+                addProductToCart={addProductToCart}
+                ordination={ordination}
+                minFilter={minFilter}
+                maxFilter={maxFilter}
+                searchFilter={searchFilter}
+                cart={cart}
+                setCart={setCart}
+                />
                 {/* <ProductCard
                 name={props.produto1.name}
                 value={props.produto1.value}
