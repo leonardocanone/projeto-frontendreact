@@ -9,4 +9,5 @@ export const ShoppingCartContainer = styled.div`
     h3 {
         margin: 15% 0
     }
+    
 `

@@ -24,7 +24,7 @@ export function ProductCard({product, addProductToCart, ordination, minFilter, m
     //         </ProductContainer> 
     //         )
     //     })
-
+    
     return (
         <>
         {lista
@@ -61,10 +61,10 @@ export function ProductCard({product, addProductToCart, ordination, minFilter, m
             </ProductImage>
             <ProductInfo>
                 <p>{item.name}</p>
-                <p>R$ {item.value},00</p>
+                <p>R$ {item.value}</p>
                 {/* <p>{props.name}</p> */}
                 {/* <p>R$ {props.value}</p> */}
-                <AddToCartButton onClick={() => addProductToCart(item.id)}>Adicionar ao carrinho</AddToCartButton>
+                <AddToCartButton onClick={() => addProductToCart(item)}>Adicionar ao carrinho</AddToCartButton>
             </ProductInfo>
             </ProductContainer> 
             )
