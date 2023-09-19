@@ -1,14 +1,21 @@
 import { ItemContainer } from "./StyleItems";
 
 
-export function Items(props) {
-    // console.log(props);
+export function Items({cart, removeProductToCart}) {
+    // console.log();
 
     return (
-        <ItemContainer>
-            <p>Nome do produto</p>
-            <p>Qtd: 2</p>
-            <button>Remover</button>
+        <>
+        {cart.map((item) => {
+            return (
+        <ItemContainer key={item.id}>
+            <p>{item.name}</p>
+            <p>Preço unit.: R$ {item.value}</p>
+            <p>Qtd adicionada: {item.quantity} x</p>
+            <button onClick={() => removeProductToCart(item)}>Remover</button>
         </ItemContainer>
+        )
+    })}
+        </>
     )
 }

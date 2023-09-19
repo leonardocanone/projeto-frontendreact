@@ -6,6 +6,8 @@ import { HomeContainer, HomeHeader, HomeProductCard } from "./StyleHome";
 export function Home({products, cart, setCart, amount, setAmount, addProductToCart, minFilter, maxFilter, searchFilter}) {
     // console.log(products);
 
+    // const [lista, setLista] = useState(products)
+
     const [ordination, setOrdination] = useState("crescente")
     
     const alterarOrdem = (event) => {

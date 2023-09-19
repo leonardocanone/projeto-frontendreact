@@ -15,11 +15,45 @@ function App() {
   const [cart, setCart] = useState ([])
   const [amount, setAmount] = useState(0)
 
+  
+  const addProductToCart = (product) => {
+    // console.log(product);
+      const addProduct = cart.find((item) => item.id === product.id)
+      // console.log(addProduct);
+      if (addProduct === undefined){
+        setCart([...cart, {...product, quantity:1}])
+      } else {
+        const newCart = cart.map((item) => {
+          if (item.id === product.id){
+            return {...addProduct, quantity:addProduct.quantity + 1}
+        } else {
+          return item
+        }
+      })
+      setCart(newCart)
+      // console.log(newCart);
+  }    
+}
 
-  const addProductToCart = () => {
+  const removeProductToCart = (product) => {
+    const removeProduct = cart.find((item) => item.id === product.id)
+      if (removeProduct.quantity > 1){
+    const newCart = cart.map((item) => {
+      if (item.id === product.id){
+        return {...removeProduct, quantity:removeProduct.quantity - 1}
+    } else {
+      return item
+    }
+  })
+    setCart(newCart)
 
+    } else {
+    const newCart = cart.filter((item) => {
+      return item.id !== product.id
+    })
+    setCart(newCart)
+    }
   }
-
 
   // const filtrarValorMinimo = (event) => {
   //   setMinfilter(event.target.value)
@@ -92,6 +126,7 @@ function App() {
         setCart={setCart}
         amount={amount}
         setAmount={setAmount}
+        removeProductToCart={removeProductToCart}
         />
       </AppContainer>
     </>
