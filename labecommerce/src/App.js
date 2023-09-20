@@ -5,7 +5,7 @@ import { Cart } from './Components/ShoppingCart/Cart/Cart';
 import { GlobalStyle } from './GlobalStyle';
 import { AppContainer } from './StyleApp';
 import { productsList } from './Components/assents/productsList';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
@@ -49,10 +49,36 @@ function App() {
 
     } else {
     const newCart = cart.filter((item) => {
-      return item.id !== product.id
+      return item.id !== product.id && product.quantity === 1
     })
+    localStorage.removeItem("cartSaved")
     setCart(newCart)
     }
+    
+    // if (product.quantity === 1){
+    //   localStorage.removeItem("cartSaved")
+    //   setCart([]) 
+    // }
+  }
+
+  useEffect(() => {
+    if(cart.length > 0){
+    localStorage.setItem("cartSaved", JSON.stringify(cart))
+    }
+  }, [cart])
+
+
+  useEffect(() => {
+    const cartSaved = localStorage.getItem("cartSaved")
+    if (cartSaved){
+    setCart(JSON.parse(cartSaved))
+    }
+  }, [])
+
+  
+  const cleanCart = () => {
+    localStorage.removeItem("cartSaved")
+    setCart([])
   }
 
   // const filtrarValorMinimo = (event) => {
@@ -127,6 +153,7 @@ function App() {
         amount={amount}
         setAmount={setAmount}
         removeProductToCart={removeProductToCart}
+        cleanCart={cleanCart}
         />
       </AppContainer>
     </>

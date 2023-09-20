@@ -2,7 +2,7 @@ import { Items } from "../Items/Items";
 import { ShoppingCartContainer } from "./StyleCart";
 
 
-export function Cart({cart, removeProductToCart, setCart}) {
+export function Cart({cart, removeProductToCart, setCart, cleanCart}) {
     // console.log(cart);
 
     const totalCart = cart.reduce((total, current) => {
@@ -10,9 +10,9 @@ export function Cart({cart, removeProductToCart, setCart}) {
         return total + current.value * current.quantity
     }, 0)
 
-    const cleanCart = () => {
-        setCart([])     
-      }
+    // const cleanCart = () => {
+    //     setCart([])     
+    //   }
 
     return (
         <ShoppingCartContainer>
