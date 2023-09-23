@@ -19,7 +19,8 @@ export function Home({products, cart, setCart, amount, setAmount, addProductToCa
     return (
         <HomeContainer>
             <HomeHeader>
-            <h4>Quantidade de produtos: {products.length} </h4>
+            {/* <h4>Quantidade de produtos: {products.length} </h4> */}
+            <h4>Brinquedos Espaciais</h4>
             <label>
                 Ordenação por preço:
                 <select value={ordination} onChange={alterarOrdem} >
