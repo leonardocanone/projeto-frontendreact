@@ -6,6 +6,8 @@ import { GlobalStyle } from './GlobalStyle';
 import { AppContainer } from './StyleApp';
 import { productsList } from './Components/assents/productsList';
 import { useEffect, useState } from 'react';
+import { Header } from './Components/FinalComponents/Header/Header';
+import { Footer } from './Components/FinalComponents/Footer/Footer';
 
 function App() {
 
@@ -118,6 +120,7 @@ function App() {
     <>
       <GlobalStyle />
 
+      <Header />
       <AppContainer>
         <Filters
         minFilter={minFilter}
@@ -154,8 +157,10 @@ function App() {
         setAmount={setAmount}
         removeProductToCart={removeProductToCart}
         cleanCart={cleanCart}
+        addProductToCart={addProductToCart}
         />
       </AppContainer>
+      <Footer />
     </>
   );
 }

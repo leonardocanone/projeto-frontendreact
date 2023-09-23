@@ -16,7 +16,7 @@ const limparFiltros = () => {
         <FiltersContainer>
             <h3>Filtros</h3>
             <InputContainer>
-            Valor mínimo:
+            Valor mínimo
             <input 
             type="number"
             value={props.minFilter}
@@ -25,7 +25,7 @@ const limparFiltros = () => {
             />
             </InputContainer>
             <InputContainer>
-            Valor máximo:
+            Valor máximo
             <input 
             type="number"
             value={props.maxFilter}
@@ -34,14 +34,14 @@ const limparFiltros = () => {
             />
             </InputContainer>
             <InputContainer>
-            Buscar por nome:
+            Buscar por nome
             <input 
             type="text"
             value={props.searchFilter}
             onChange={props.filtrarPorNome}  
             />
-            </InputContainer>
             <button onClick={limparFiltros}>Limpar filtros</button>
+            </InputContainer>
         </FiltersContainer>
         
     )

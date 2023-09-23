@@ -1,7 +1,7 @@
-import { ItemContainer } from "./StyleItems";
+import { ButtonsCart, ItemContainer } from "./StyleItems";
 
 
-export function Items({cart, removeProductToCart}) {
+export function Items({cart, removeProductToCart, addProductToCart}) {
     // console.log();
 
     return (
@@ -9,10 +9,15 @@ export function Items({cart, removeProductToCart}) {
         {cart.map((item) => {
             return (
         <ItemContainer key={item.id}>
+            <img src={item.imageUrl} alt="ProductImage" />
             <p>{item.name}</p>
-            <p>Preço unit.: R$ {item.value}</p>
-            <p>Qtd adicionada: {item.quantity} x</p>
-            <button onClick={() => removeProductToCart(item)}>Remover</button>
+            <p> • Preço: R$ {item.value},00</p>
+            {/* <p> - Quantidade: {item.quantity} x</p> */}
+            <ButtonsCart>
+                <button onClick={() => removeProductToCart(item)}>-</button>
+                <p>{item.quantity}</p>
+                <button onClick={() => addProductToCart(item)}>+</button>
+            </ButtonsCart>
         </ItemContainer>
         )
     })}

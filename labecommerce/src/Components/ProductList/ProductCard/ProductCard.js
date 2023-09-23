@@ -56,12 +56,12 @@ export function ProductCard({product, addProductToCart, ordination, minFilter, m
         return (
             <ProductContainer key={item.id}>
             <ProductImage>
-                <img src={item.imageUrl} alt="ProductCard" />
+                <img src={item.imageUrl} alt="ProductImage" />
                 {/* <img src={props.imageUrl} alt="ProductCard" /> */}
             </ProductImage>
             <ProductInfo>
-                <p>{item.name}</p>
-                <p>R$ {item.value}</p>
+                <h4>{item.name}</h4>
+                <h3>R$ {item.value},00</h3>
                 {/* <p>{props.name}</p> */}
                 {/* <p>R$ {props.value}</p> */}
                 <AddToCartButton onClick={() => addProductToCart(item)}>Adicionar ao carrinho</AddToCartButton>
