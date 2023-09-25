@@ -8,7 +8,6 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     background-image: linear-gradient(to right, rgb(24, 43, 58), rgb(6, 46, 101),rgb(245, 158, 59));
-    /* background-image: linear-gradient(to right, rgb(61, 13, 113), rgb(132, 50, 204), rgb(183, 120, 238)); */
     color: rgb(245, 133, 59);
     border-radius: 8px;
     height: 10vh;
@@ -22,6 +21,10 @@ export const HeaderContainer = styled.header`
 
     h1 {
         margin-left: 1%;
+    }
+
+    @media only screen and (max-width: 390px){
+        min-width: 138vw;
     }
 
 `

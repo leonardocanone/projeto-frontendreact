@@ -13,6 +13,10 @@ export const ProductContainer = styled.div`
     &:hover {
         box-shadow: 0.3rem 0.3rem 0.3rem #ccc
          }
+     
+        @media only screen and (max-width: 390px){
+        min-height: 50vh;
+    }
     
 `
 
@@ -47,9 +51,25 @@ export const ProductImage = styled.div`
         width: 50vw;
     }
 
+    @media only screen and (max-width: 768px) {
+        height: 40vh;
+        width: 51vw;
+    }
 
+    @media only screen and (min-width: 390px) and (max-width: 767px) {
+        height: 50vh;
+        width: 54vw;
+    }
+
+    @media only screen and (max-width: 390px){
+        height: 33vh;
+        width: 63vw;
     }
     
+    }
+    
+
+
     @media only screen and (min-width: 1148px) and (max-width: 1340px) {
         width: 22vw;
     }
@@ -67,6 +87,24 @@ export const ProductImage = styled.div`
         height: 55vh;
         width: 50vw;
     }
+
+    @media only screen and (max-width: 768px) {
+        height: 40vh;
+        width: 51vw;
+    }
+
+    @media only screen and (min-width: 390px) and (max-width: 767px) {
+        height: 50vh;
+        width: 54vw;
+        margin-right: 0.7rem;
+    }
+
+    @media only screen and (max-width: 390px){
+        height: 33vh;
+        width: 63vw;
+        margin-right: 0.7rem;
+    }
+
 `
 
 export const ProductInfo = styled.div`
@@ -108,7 +146,19 @@ export const ProductInfo = styled.div`
     @media only screen and (max-width: 890px) {
         width: 50vw;
     }
+
+    @media only screen and (max-width: 768px) {
+        width: 51vw;
+    }
+
+    @media only screen and (min-width: 390px) and (max-width: 767px) {
+        width: 54vw;
+    }
     
+    @media only screen and (max-width: 390px){
+        width: 63vw;
+    }
+
 `
 
 export const AddToCartButton = styled.button`

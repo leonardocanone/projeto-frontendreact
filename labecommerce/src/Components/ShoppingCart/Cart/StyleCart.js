@@ -10,6 +10,11 @@ export const ShoppingCartContainer = styled.div`
     /* width: 15vw; */
     width: 204px;
 
+    @media only screen and (max-width: 390px){
+        min-width: 42vw;
+        padding: 0.4rem;
+    }
+
     img {
         /* width: 4.5vw; */
         width: 60px;
