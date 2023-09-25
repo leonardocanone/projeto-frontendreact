@@ -13,4 +13,9 @@ export const FooterContainer = styled.footer`
     align-items: center;
     gap: 1.5rem;
 
+    @media only screen and (max-width: 390px){
+        padding: 0 1rem;
+        min-width: 138vw;
+    }
+
 `

@@ -13,6 +13,10 @@ export const ItemContainer = styled.div`
     border-radius: 7px;
     padding: 0.5rem;
 
+    @media only screen and (max-width: 390px){
+        width: 39vw
+    }
+
     img {
         border-radius: 5px;
         align-self: center;
