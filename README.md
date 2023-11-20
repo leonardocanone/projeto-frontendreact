@@ -64,12 +64,12 @@ Visão de tablet na vertical
 ###
 Visão do smartphone ainda sem produtos adicionados
 
-<img style="width:300px" src="./labecommerce/src/Components/assents/img/Visão-smartphone1.png" alt="Visão-smartphone1">
+<img style="width:300px" src="./labecommerce/src/Components/assents/img/Visão-smartphone1.jpg" alt="Visão-smartphone1">
 
 ###
 Visão do smartphone agora com produtos adicionados ao carrinho
 
-<img style="width:300px" src="./labecommerce/src/Components/assents/img/Visão-smartphone2.png" alt="Visão-smartphone2">
+<img style="width:300px" src="./labecommerce/src/Components/assents/img/Visão-smartphone2.jpg" alt="Visão-smartphone2">
 
 ###
 
